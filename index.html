@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trip Planner - Home</title>
+  <link rel="stylesheet" href="style.css">
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+  <header>
+    <h1>🌍 Trip Planner</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  
+  <div class="banner">
+    <img src="images/eiffle tower.jpeg" alt="Landmark">
+    <img src="images/pyramids.jpeg" alt="Landmark">
+    <img src="images/liberty.jpeg" alt="Landmark">
+  </div>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="placeInput" placeholder="Search for a place..." />
+      <button onclick="searchPlace()">Search</button>
+    </section>
+
+    <section class="results-section">
+      <div id="imageResult"></div>
+
+      
+      <div id="mapResult" style="width: 100%; height: 300px; margin-top: 20px; border-radius: 8px;"></div>
+
+      <div id="weatherResult"></div>
+    </section>
+
+    <section id="itinerarySection" style="display:none;">
+      <h2>🗺️ Itinerary for <span id="placeName"></span></h2>
+      <input type="text" id="activityInput" placeholder="Add activity..." />
+      <button onclick="addActivity()">Add</button>
+      <ul id="activityList"></ul>
+    </section>
+
+   
+    <section class="suggestions-grid">
+      <div class="suggestion-card" style="grid-row: span 2;">
+        <img src="images/paris.jpeg" alt="Paris">
+        <div>
+          <h3>Paris</h3>
+          <p>The city of love, lights, and history — a must-visit for art, food, and romance lovers!</p>
+        </div>
+      </div>
+
+      <div class="suggestion-card">
+        <img src="images/NY.jpeg" alt="New York">
+        <div>
+          <h3>New York</h3>
+          <p>Experience the hustle, skyscrapers, Broadway, and vibrant culture like nowhere else.</p>
+        </div>
+      </div>
+
+      <div class="suggestion-card" style="grid-row: span 1;">
+        <img src="images/TOKYO.jpeg" alt="Tokyo">
+        <div>
+          <h3>Tokyo</h3>
+          <p>Where tradition meets futuristic innovation — sushi, temples, neon, and anime!</p>
+        </div>
+      </div>
+
+      <div class="suggestion-card" style="grid-column: span 2;">
+        <img src="images/ROME.jpeg" alt="Rome">
+        <div>
+          <h3>Rome</h3>
+          <p>Walk through ancient history with every step — the Colosseum, Vatican, and more.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

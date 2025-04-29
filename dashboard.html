@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trip Planner - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📋 Trip Dashboard</h1>
+    <nav>
+      <a href="index.html" class="return-btn">Return Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="budget-section">
+      <h2>Budget Tracker</h2>
+      <input type="text" id="expenseName" placeholder="Expense name">
+      <input type="number" id="expenseAmount" placeholder="Amount">
+      <button onclick="addExpense()">Add Expense</button>
+
+      <div class="budget-summary">
+        <h3>Total Spent: $<span id="totalSpent">0</span></h3>
+        <ul id="expenseList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
